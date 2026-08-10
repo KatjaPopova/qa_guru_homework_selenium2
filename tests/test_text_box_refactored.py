@@ -4,6 +4,15 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
+from pages.text_box_page import TextBoxPage
+
+
+@pytest.fixture()
+def text_box_page(driver):
+    page = TextBoxPage(driver)
+    page.open()
+    return page
+
 
 def assert_result_contains(page, name="", email="", current_address="", permanent_address=""):
     text = page.get_result_text()

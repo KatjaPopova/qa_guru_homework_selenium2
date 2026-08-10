@@ -3,7 +3,14 @@ from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 from pages.table_element import TableElement
-from tests.conftest import tables_page
+from pages.tables_page import TablesPage
+
+
+@pytest.fixture()
+def tables_page(driver):
+    page = TablesPage(driver)
+    page.open()
+    return page
 
 
 # =========================

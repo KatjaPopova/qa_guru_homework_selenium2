@@ -3,6 +3,15 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
+from pages.login_page import LoginPage
+
+
+@pytest.fixture()
+def login_page(driver):
+    page = LoginPage(driver)
+    page.open()
+    return page
+
 
 # Позитивные тесты:
 # 1. Неудачная попытка залогиниться (не удалось найти успешный способ это сделать):
