@@ -72,7 +72,7 @@ class TestSuite:
             email_field = self.get_driver().find_element(By.ID, "userEmail")
             email_field.send_keys("ivan@example.com")
 
-            # Находим поле Permanent Adress по его ID и вводим текст
+            # Находим поле Permanent Address по его ID и вводим текст
             permanent_address_field = self.get_driver().find_element(By.ID, "permanentAddress")
             permanent_address_field.send_keys("Ленинград, 3-я улица Строителей, 25")
 

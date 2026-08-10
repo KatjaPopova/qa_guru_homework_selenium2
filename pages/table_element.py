@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class TableElement:
+
     def __init__(self, driver, locator):
         self.driver = driver
         self.locator = locator
@@ -59,7 +60,6 @@ class TableElement:
 
         return True
 
-
     def get_all_emails(self):
         rows = self.element.find_elements(By.CSS_SELECTOR, "tbody tr")
         emails = []
@@ -69,7 +69,6 @@ class TableElement:
             emails.append(cells[2].text)
 
         return emails
-
 
     def user_exists(self, last_name):
         rows = self.element.find_elements(By.CSS_SELECTOR, "tbody tr")

@@ -1,6 +1,6 @@
 from selene import browser, have
 
-# python -m venv venv
+# python -m venv
 # Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 # venv\Scripts\activate
 
